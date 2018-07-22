@@ -9,3 +9,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Trail.create(trail_name: 'My trail', location: 'My town', distance: '3.1 miles', elevation_gain: '245 ft', trail_type: 'Loop', skill_level: 'Easy' )
