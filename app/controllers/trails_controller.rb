@@ -1,9 +1,10 @@
-class TrailsController < ApplicationController
-  before_action :set_trail, only: [:show, :update, :destroy, :create]
+class TrailsController <  OpenReadController
+  before_action :set_trail, only: [:show, :update, :destroy]
 
   # GET /trails
   def index
     @trails = Trail.all
+
 
     render json: @trails
   end
@@ -15,7 +16,11 @@ class TrailsController < ApplicationController
 
   # POST /trails
   def create
-    @trail = Trail.new(trail_params)
+    @trail = current_user.trails.build(trail_params)
+    # @trail = Trail.new(trail_params)
+    # @trail.user_id = 1
+    # @trail.user_id = current_user
+    # # p current_user
 
     if @trail.save
       render json: @trail, status: :created, location: @trail
@@ -39,6 +44,7 @@ class TrailsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_trail
       @trail = Trail.find(params[:id])
