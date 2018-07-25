@@ -7,8 +7,8 @@ curl "http://localhost:4741/change-password" \
   --header "Content-Type: application/json" \
   --data '{
     "passwords": {
-      "old": "'"${OLD}"'",
-      "new": "'"${NEW}"'"
+      "old": "'"${OLD_PASSWORD}"'",
+      "new": "'"${NEW_PASSWORD}"'"
     }
   }'
 
