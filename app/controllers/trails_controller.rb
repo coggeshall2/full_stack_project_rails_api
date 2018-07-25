@@ -31,6 +31,7 @@ class TrailsController <  OpenReadController
 
   # PATCH/PUT /trails/1
   def update
+  
     if @trail.update(trail_params)
       render json: @trail
     else
@@ -40,6 +41,7 @@ class TrailsController <  OpenReadController
 
   # DELETE /trails/1
   def destroy
+
     @trail.destroy
   end
 
