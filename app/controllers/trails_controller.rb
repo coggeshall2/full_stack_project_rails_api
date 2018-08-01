@@ -1,14 +1,15 @@
-class TrailsController <  OpenReadController
+class TrailsController <  ProtectedController
   before_action :set_trail, only: [:show, :update, :destroy]
 
   # GET /trails
   def index
-    @trails = Trail.all
-
-
+    @trails = current_user.trails.all
     render json: @trails
   end
 
+#   def permission_denied
+#   render :json => "public/401", :status => :unauthorized
+# end
   # GET /trails/1
   def show
     render json: @trail
@@ -31,7 +32,7 @@ class TrailsController <  OpenReadController
 
   # PATCH/PUT /trails/1
   def update
-  
+
     if @trail.update(trail_params)
       render json: @trail
     else
@@ -49,8 +50,9 @@ class TrailsController <  OpenReadController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_trail
-      @trail = Trail.find(params[:id])
+      @trail = current_user.trails.find(params[:id])
     end
+
 
     # Only allow a trusted parameter "white list" through.
     def trail_params
