@@ -45,3 +45,6 @@ Ruby on rails is used for the backend API operations.
 
 ## Updates
 I am working on creating a better UI that is styled with imagery and eventually connecting to a 3rd party API allowing for a search of all trails within their database.
+
+Link to my frontend of this project:
+https://github.com/coggeshall2/full-stack-project-front-end
