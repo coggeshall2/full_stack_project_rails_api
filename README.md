@@ -41,7 +41,7 @@ Javascript is used to build the form fields, send AJAX calls and jQuery is used 
 Ruby on rails is used for the backend API operations.
 
 ## Entity Relationship Diagram
-![Serenity Trails Logger ERD](https://github.com/coggeshall2/full_stack_project_rails_api/blob/master/Entity%20Relationship%20Diagram.pdf)
+![Serenity Trails Logger Entity Relationship Diagram](https://github.com/coggeshall2/full_stack_project_rails_api/blob/master/Entity%20Relationship%20Diagram.pdf)
 
 ## Updates
 I am working on creating a better UI that is styled with imagery and eventually connecting to a 3rd party API allowing for a search of all trails within their database.
