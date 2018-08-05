@@ -1,9 +1,9 @@
-class TrailsController <  ProtectedController
+class TrailsController <  OpenReadController
   before_action :set_trail, only: [:show, :update, :destroy]
 
   # GET /trails
   def index
-    @trails = current_user.trails.all
+    @trails = Trail.all
     render json: @trails
   end
 
